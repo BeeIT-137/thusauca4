@@ -18,8 +18,13 @@ jobs:
         with:
           server: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
-          password: ${{ secrets.PASSWD }}
+          password: ${{ secrets.FTP_PASSWD }}
+
           protocol: ftp
           port: 21
+
+          # code trong repo (nếu index.php/index.html nằm ngay thư mục gốc)
           local-dir: ./
-          server-dir: /
+
+          # đúng thư mục web somee
+          server-dir: /www.anhdung.somee.com/
